@@ -37,10 +37,10 @@ end
 def total_gross(source)
   total_gross = 0 
   i=0 
-  list_of_keys = list_of_directors(source)
-  individual_grosses = directors_totals(source)
-  while i<list_of_keys.length do
-    total_gross += directors_totals[list_of_keys[i]]
+  array_of_keys = list_of_directors(source)
+  hash = directors_totals(source)
+  while i<array_of_keys.length do
+    total_gross += hash[array_of_keys[i]]
     i += 1 
   end
   total_gross
